@@ -39,7 +39,7 @@ import java.util.Map;
 
 import ik.cp2.bucketlist.adapters.BucketListAdapter;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener,AddBucketList.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "MainActivity" ;
     private RecyclerView bucketListRecyclerView;
     private LinearLayoutManager bucketListLayoutManager;
@@ -47,11 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public RequestQueue requestQueue;
     public FloatingActionButton add_bucketlist;
     public CardView bucket;
-    Fragment f = AddBucketList.newInstance("","");
     FragmentManager fragmentManager = getSupportFragmentManager();
-    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-    AddBucketList fragment = new AddBucketList();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,8 +89,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return true;
             case R.id.home:
                 Log.i("Test","Clicked");
-                fragmentTransaction.remove(fragment);
-                fragmentTransaction.commit();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -176,11 +170,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
+    
 
     public void setActionBarTitle(String title){
         getSupportActionBar().setTitle(title);
