@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BUCKETS</string>
+    <string name="bucket_prefs">BucketListPreferences</string>
+
+
+    <!--Server URLS-->
+    <string name="dev_server">http://10.0.2.2:5000</string>
+    <string name="prod_server">http://buckets-a.herokuapp.com/api/v1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
